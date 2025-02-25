@@ -8,7 +8,6 @@ Colección de proyectos prácticos con Arduino para aprendizaje y experimentaci�
 - [Lista de Proyectos](#-lista-de-proyectos)
 - [Requisitos](#-requisitos)
 - [Instalación](#-instalación)
-- [Uso](#-uso)
 - [Contribución](#-contribución)
 
 ---
