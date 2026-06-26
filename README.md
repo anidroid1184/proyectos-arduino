@@ -56,7 +56,6 @@ A curated collection of hardware-software integration projects, physical computi
 1. Clone the repository:
 ```bash
 git clone [https://github.com/anidroid1184/proyectos-arduino.git](https://github.com/anidroid1184/proyectos-arduino.git)
-
 ```
 2. Launch your Arduino IDE and open the target project directory.
 
