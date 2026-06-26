@@ -1,76 +1,58 @@
-# 🛠️ Repositorio de Proyectos Arduino
+# 🛠️ Embedded Systems & Firmware Foundations: Arduino Ecosystem
 
-Colección de proyectos prácticos con Arduino para aprendizaje y experimentación en electrónica y programación embebida.
+A curated collection of hardware-software integration projects, physical computing, and lower-level logic implementations for microcontrolled architectures.
 
 ![Arduino Banner](https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg)
 
-## 📋 Tabla de Contenidos
-- [Lista de Proyectos](#-lista-de-proyectos)
-- [Requisitos](#-requisitos)
-- [Instalación](#-instalación)
-- [Contribución](#-contribución)
+## 📋 Table of Contents
+- [Project Inventory](#-project-inventory)
+- [Hardware & Software Requirements](#-hardware--software-requirements)
+- [Getting Started](#-getting-started)
+- [Contribution](#-contribution)
 
 ---
 
-## 🚀 Lista de Proyectos
+## 🚀 Project Inventory
 
-| #   | Nombre del Proyecto | Descripción | Componentes Clave |
+| #  | Module / System | Technical Description | Core Components & Peripherals |
 |-----|----------------------|-------------|--------------------|
-| 1   | [Inicio Arduino](1-inicio-arduino) | Configuración básica de entorno | Placa Arduino UNO |
-| 2   | [Entrada Digital](2-exertura-digital) | Lectura de señales digitales | Pulsadores |
-| 3   | [LED con Resistencia](3-led-resistencia) | Circuito básico de iluminación | LED, Resistencia 220Ω |
-| 4   | [Luces LED Navidad](4-electo-luces-led-navidad) | Secuencia luminosa festiva | Múltiples LEDs |
-| 5   | [Lectura Analógica](5-lectura-datos-analogicos) | Medición de señales analógicas | Sensor LDR |
-| 6   | [Multímetro con Arduino](6-multimetro-con-arduino) | Medición de voltaje/resistencia | Divisor de voltaje |
-| 7   | [Monitor Serial](7-monitor-serial) | Comunicación serie básica | - |
-| 8   | [Uso de Potenciómetro](8-uso-potenciometro) | Control de parámetros con entrada variable | Potenciómetro 10KΩ |
-| 9   | [Control de Flujo RF](9-control-de-flujo-rf) | Comunicación inalámbrica básica | Módulo RF 433MHz |
-| 10  | [Control de LEDs con Potenciómetro](10-control-multiples-led-con-potenciometro) | Regulación de brillo | LEDs, Potenciómetro |
-| 11  | [Loop While](11-loop-while) | Ejemplo de estructura de control | - |
-| 12  | [Lecturas Seriales](12-lecturas-seriales) | Interacción por terminal | - |
-| 13  | [Selección Manual de Color](13-seleccion-manual-de-color) | Control de RGB LED | LED RGB |
-| 14  | [Buzzer Activo](14-buzzer-activo) | Generación de tonos simples | Buzzer activo |
-| 15  | [Buzzer Pasivo](15-buzzer-pasivo) | Melodías personalizadas | Buzzer pasivo |
-| 16  | [Servo Motor](16-servo-motor) | Control de posición angular | Servomotor SG90 |
-| 17  | [Joystick](17-joystick) | Entrada bidireccional | Módulo Joystick |
-| 18  | [Pantalla KCD](18-paratalla-kcd) | Visualización básica | Display 7 segmentos |
-| 19  | [Sensor Infrarrojo](19-sensor-con-sensor-infrarrojo) | Detección de objetos | Sensor IR |
-| 20  | [Brazo Robótico](20-traszo-robotico) | Sistema mecatrónico básico | Servomotores |
-| 21  | [Transformador AC-DC](21-transformador-AC-DC) | Fuente de alimentación | Transformador 12V |
-| 22  | [Proyecto SmartTrain](22-Proyecto_smarttrain) | Modelo de tren automatizado | Sensores, Motores DC |
+| 1   | [Environment Setup](1-inicio-arduino) | IDE Toolchain & basic MCU configuration | Arduino UNO (ATmega328P) |
+| 2   | [Digital Input Polling](2-exertura-digital) | State reading and digital signal filtering | Push buttons |
+| 3   | [Current-Limiting Circuits](3-led-resistencia) | Fundamental LED circuit protection math | LED, 220Ω Resistor |
+| 4   | [GPIO Array Modulation](4-electo-luces-led-navidad) | Sequential multi-channel output logic | Discrete LED Arrays |
+| 5   | [Analog-to-Digital Conversion](5-lectura-datos-analogicos) | Photometric data ingestion via ADC | LDR Sensor |
+| 6   | [MCU-Based Voltmeter](6-multimetro-con-arduino) | DC voltage measurement through voltage division | Voltage Divider Circuit |
+| 7   | [Serial Interface Setup](7-monitor-serial) | Asynchronous serial bus initialization | UART / Serial Monitor |
+| 8   | [Analog Input Parsing](8-uso-potenciometro) | Variable resistance reading for parameter control | 10KΩ Potentiometer |
+| 9   | [RF Flow Modulation](9-control-de-flujo-rf) | Basic low-power wireless data link | 433MHz RF Module |
+| 10  | [Multi-LED Duty Cycle Control](10-control-multiples-led-con-potenciometro) | Dynamic output adjustment via analog references | LEDs, Potentiometer |
+| 11  | [Conditional Loops Control](11-loop-while) | Iterative execution blocks under hardware constraints | Control Flow Logic |
+| 12  | [Serial Stream Buffer](12-lecturas-seriales) | Terminal character reading and string parsing | UART Bus |
+| 13  | [Manual Chromatic Selection](13-seleccion-manual-de-color) | Multi-channel PWM configuration for color spaces | RGB LED |
+| 14  | [Frequency Generation (Active)](14-buzzer-activo) | Single-tone acoustic alert deployment | Active Piezo Buzzer |
+| 15  | [Frequency Generation (Passive)](15-buzzer-pasivo) | Custom audio melody composition via raw PWM | Passive Piezo Buzzer |
+| 16  | [Angular Position Control](16-servo-motor) | PWM duty-cycle manipulation for position holding | SG90 Servomotor |
+| 17  | [Bi-Axial Coordinate Reading](17-joystick) | Dual-axis analog reading and switch polling | Joystick Module |
+| 18  | [Segmented Visual Outputs](18-paratalla-kcd) | Multiplexed array visualization logic | 7-Segment Display |
+| 19  | [Infrared Proximity Tracking](19-sensor-con-sensor-infrarrojo) | Object detection using optical sensor parsing | IR Proximity Sensor |
+| 20  | [Robotic Kinematics Model](20-traszo-robotico) | Multi-axis mechatronic system coordination | Joint Servomotors |
+| 21  | [AC-DC Power Rectification](21-transformador-AC-DC) | Step-down transformer & filtering implementation | 12V Step-Down Transformer |
+| 22  | [SmartTrain Automation System](22-Proyecto_smarttrain) | Automated transit system model with real-time feedback | DC Motors, Feedback Sensors |
 
 ---
 
-## ⚙️ Requisitos
-- **Hardware**: 
-  - Placa Arduino UNO/R3
-  - Kit de componentes básicos (LEDs, resistencias, sensores)
-  - Cable USB tipo B
-- **Software**:
-  - [IDE Arduino](https://www.arduino.cc/en/software)
-  - Drivers CH340 (para clones)
+## ⚙️ Hardware & Software Requirements
+- **Hardware Layer**: 
+  - MCU Board: Arduino UNO / ATmega328P based hardware
+  - Passive Components (Resistors, LEDs, Transistors)
+  - Transducers & Sensors (IR, LDR, Joystick)
+- **Software Layer**:
+  - Toolchain: [Arduino IDE](https://www.arduino.cc/en/software)
+  - Communication Drivers: CH340 / FTDI USB-to-Serial drivers
 
 ---
 
-## 📥 Instalación
-1. Clona el repositorio:
-```
-   git clone https://github.com/tu-usuario/repositorio-arduino.git
-```
-2. Abre cada proyecto desde el IDE Arduino
-
-3. Selecciona tu placa: Tools > Board > Arduino AVR Boards > Arduino Uno
-
-4. Establece el puerto COM correcto
----
-
-## 🤝 Contribución
-Haz fork del proyecto
-
-Crea una rama: git checkout -b mejora/proyecto-X
-
-Realiza tus cambios y haz commit
-
-Envía un Pull Request
----
-⭐ ¿Te gusta el proyecto? Déjanos una estrella en GitHub para apoyar el desarrollo.
+## 📥 Getting Started
+1. Clone the repository:
+```bash
+git clone [https://github.com/anidroid1184/proyectos-arduino.git](https://github.com/anidroid1184/proyectos-arduino.git)
