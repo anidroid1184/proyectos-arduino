@@ -56,3 +56,21 @@ A curated collection of hardware-software integration projects, physical computi
 1. Clone the repository:
 ```bash
 git clone [https://github.com/anidroid1184/proyectos-arduino.git](https://github.com/anidroid1184/proyectos-arduino.git)
+
+```
+2. Launch your Arduino IDE and open the target project directory.
+
+3. Select your hardware targets: Tools > Board > Arduino AVR Boards > Arduino Uno
+
+4. Choose the active COM/Serial Port and flash the firmware.
+
+## 🤝 Contribution
+1. Fork this repository.
+
+2. Spin up your local feature branch: git checkout -b feature/improvement-X
+
+3. Commit your changes under clear, semantic standards.
+
+4. Open a Pull Request.
+
+⭐ If you find this engineering reference codebase helpful, drop a star!
